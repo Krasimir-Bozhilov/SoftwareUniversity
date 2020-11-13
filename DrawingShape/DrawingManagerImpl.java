@@ -1,24 +1,30 @@
-package solidLab.p01_SingleResponsibility.p01_DrawingShape;
+package solidLab.p02_OpenClosedPrinciple.p02_DrawingShape;
 
 import solidLab.p01_SingleResponsibility.p01_DrawingShape.interfaces.DrawingManager;
-import solidLab.p01_SingleResponsibility.p01_DrawingShape.interfaces.DrawingRepository;
-import solidLab.p01_SingleResponsibility.p01_DrawingShape.interfaces.Rengerer;
 import solidLab.p01_SingleResponsibility.p01_DrawingShape.interfaces.Shape;
 
 
 public class DrawingManagerImpl implements DrawingManager {
 
-    private final DrawingRepository drawingRepository;
-    private final Rengerer renderer;
-
-    public DrawingManagerImpl(DrawingRepository drawingRepository, Rengerer renderer) {
-        this.drawingRepository = drawingRepository;
-        this.renderer = renderer;
-    }
-
 
     @Override
     public void draw(Shape shape) {
-        shape.draw(this.renderer, this.drawingRepository);
+        if (shape instanceof Circle)
+        {
+            this.drawCircle((Circle)shape);
+        }
+            else if (shape instanceof Rectangle)
+        {
+            this.drawRectangle(((Rectangle)shape));
+        }
+    }
+    public void drawCircle(Circle circle)
+    {
+        // Draw Circle
+    }
+
+    public void drawRectangle(Rectangle rectangle)
+    {
+        // Draw Rectangle
     }
 }

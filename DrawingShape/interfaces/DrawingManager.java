@@ -1,5 +1,5 @@
-package solidLab.p01_SingleResponsibility.p01_DrawingShape.interfaces;
+package solidLab.p02_OpenClosedPrinciple.p02_DrawingShape.interfaces;
 
-public interface DrawingManager{
+public interface DrawingManager {
     void draw(Shape shape);
 }
